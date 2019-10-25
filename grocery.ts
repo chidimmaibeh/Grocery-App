@@ -1,19 +1,19 @@
 class Grocery {
   name: string;
-  qunatity: number;
-  constructor(public itemName:string, public itemQunatity:number)
+  quantity: number;
+  constructor(public itemName:string, public itemQuantity:number)
   {
-    this.name = itemName + "" + itemQunatity;
+    this.name = itemName + "" + itemQuantity;
   }
 }
 
 interface Food {
   itemName: string;
-  itemQunatity:number;
+  itemQuantity:number;
 }
 
 function getList(food:Food) {
-  return "Your grocery items, " + food.itemName;
+  return "Your grocery items, " + food.itemName + food.itemQuantity;
 }
 
 let grocerylist = new Grocery("milk", 3, "bread", 6, "eggs", 11)
