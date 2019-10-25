@@ -16,5 +16,5 @@ function getList(food:Food) {
   return "Your grocery items, " + food.itemName + food.itemQuantity;
 }
 
-let grocerylist = new Grocery("milk", 3, "bread", 6, "eggs", 11)
+let grocerylist = new Grocery("milk", 3)  
 document.body.textContent = getList(grocerylist);
