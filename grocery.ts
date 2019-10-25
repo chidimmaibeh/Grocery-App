@@ -13,7 +13,7 @@ interface Food {
 }
 
 function getList(food:Food) {
-  return "Your grocery items, " + food.itemName + food.itemQuantity;
+  return "Your grocery items, " + food.itemName + " " + food.itemQuantity;
 }
 
 let grocerylist = new Grocery("milk", 3)  
