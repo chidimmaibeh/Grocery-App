@@ -1,13 +1,28 @@
 var Grocery = /** @class */ (function () {
-    function Grocery(itemName, itemQuantity) {
-        this.itemName = itemName;
-        this.itemQuantity = itemQuantity;
-        this.name = itemName + " " + itemQuantity;
+    function Grocery(name, quantity) {
+        this.name = name;
+        this.quantity = quantity;
     }
     return Grocery;
 }());
-function getList(food) {
-    return "Your grocery items are, " + food.itemName + " " + food.itemQuantity;
+var groceries = [
+    { name: 'milk', quantity: 3 },
+    { name: 'bread', quantity: 6 },
+    { name: 'eggs', quantity: 11 }
+];
+function getStrings(groceries) {
+    var str = '';
+    for (var i = 0; i < groceries.length; i++) {
+        var itemString = 'Name: ' + groceries[i].name + ' Quantity: ' + groceries[i].quantity + '----';
+        str += itemString;
+    }
+    return str;
 }
-var grocerylist = new Grocery("milk", 3);
-document.body.textContent = getList(grocerylist);
+console.log(groceries);
+document.body.textContent = getStrings(groceries);
+/*
+1.	Create a file called grocery.ts. It should have a definition of a class with the obvious name Grocery. The class should have some basic attributes such as name, quantity, etc. Feel free to add any other attributes you think will be necessary.
+2.	Add few grocery items to an array of groceries, such as milk, bread, and eggs, along with some quantities (i.e. 3, 6, 11).  Display these grocery items as HTML output.
+3.	The output of this assignment will be grocery.ts and groceries.html displaying the output.
+
+*/ 

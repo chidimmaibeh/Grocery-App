@@ -1,56 +1,32 @@
 
-// class Grocery1 {
-//   name: string;
-//   quantity: number;
-//   constructor(public theName:string, public theQuantity:number)
-//   {
-//     this.name = theName;
-//     this.quantity = theQuantity;
-//   }
 
-
-
-// }
-
-class Grocery1 {
+class Grocery {
   name: string;
   quantity:number;
   constructor(name: string, quantity: number) {
     this.name = name;
     this.quantity  = quantity;
+  }
 }
-}
-// There are a couple of ways to init value for arrays, i will show you 2 ways
-let groceries1: Grocery1[] = [
+
+const groceries: Grocery[] = [
   {name: 'milk', quantity: 3},
   {name: 'bread', quantity: 6},
   {name: 'eggs', quantity: 11}
 ];
-// groceries1.push(new Grocery1('milk', 3))
-// function initValueForGroceries1(): void{
-//   for(let i =0; i<10; i++){
-//     groceries1.push(
-//       new Grocery1
-//       ('item '+ i,      i)
-//     )
-//   }
-// }
-// function arraytoString (): string {
-  
-// }
-// initValueForGroceries1();
-function getStrings(groceries1: Grocery1[]) :string  {
+
+function getStrings(groceries: Grocery[]) :string  {
   let str = '';
-  for(let i =0;i < groceries1.length;i++) {
-    let itemString =  'Name: '+groceries1[i].name+' Quantity: ' + groceries1[i].quantity + '----';
+  for(let i =0;i < groceries.length;i++) {
+    let itemString =  'Name: '+groceries[i].name+' Quantity: ' + groceries[i].quantity + '----';
       str += itemString;
   }
   return str;
 }
 
-console.log(groceries1)
+console.log(groceries)
 
-document.body.textContent = getStrings(groceries1);
+document.body.textContent = getStrings(groceries);
 
 
 
